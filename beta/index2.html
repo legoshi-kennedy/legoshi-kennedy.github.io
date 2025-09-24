@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legoshi's Library</title>
+    <!-- Tailwind CSS is used for styling, which is supported by the Wii U browser. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /*
+         * Wii U browsers may not fully support advanced fonts.
+         * The font-family has been simplified to a standard system font stack.
+         */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: sans-serif;
         }
         .book-carousel::-webkit-scrollbar {
             height: 6px;
@@ -20,12 +25,9 @@
             background: transparent;
         }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body class="p-4 md:p-8 bg-stone-100 text-stone-800">
-    <div class="max-w-xl mx-auto my-8 bg-stone-200 rounded-3xl overflow-hidden shadow-2xl">
+    <div class="max-w-xl mx-auto my-8 bg-stone-200 rounded-3xl overflow-hidden shadow-lg">
         <header class="p-6">
             <nav class="flex justify-between items-center text-sm text-stone-500">
                 <span class="left-align">Last Updated September 24, 2025</span>
