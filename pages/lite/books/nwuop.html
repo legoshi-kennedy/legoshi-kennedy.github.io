@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wii U Operations Manual (Simple)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+    <div class="max-w-md mx-auto">
+        <header class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">Wii U Operations Manual</h1>
+            <p class="text-gray-600 text-sm">Viewing pages in a simple list.</p>
+        </header>
+
+        <main id="image-gallery" class="space-y-6">
+            <!-- Images will be generated here by JavaScript -->
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('image-gallery');
+            const totalPages = 45;
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageNumber = String(i).padStart(4, '0');
+                const title = `WiiU_OperationsManual_EN_page-${pageNumber}`;
+
+                const container = document.createElement('div');
+                container.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+
+                const link = document.createElement('a');
+                link.href = `books/nwuop/WiiU_OperationsManual_EN_page-${pageNumber}.jpg`;
+                link.target = '_blank';
+
+                const img = document.createElement('img');
+                // Placeholder image URL
+                img.src = `https://placehold.co/600x450/E5E7EB/4B5563?text=Page+${i}`;
+                img.alt = title;
+                img.className = 'w-full h-auto object-cover';
+
+                link.appendChild(img);
+                container.appendChild(link);
+                gallery.appendChild(container);
+            }
+        });
+    </script>
+</body>
+</html>
