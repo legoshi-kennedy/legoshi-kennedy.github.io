@@ -1,0 +1,113 @@
+body {
+    background-color: #f3e9d2; /* Sepia background */
+    font-family: 'Merriweather', serif; /* Kindle-like serif font */
+    color: #444; /* Soft black text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.kindle-container {
+    background-color: #f3e9d2;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    border-radius: 8px;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    left: 2.5rem;
+    right: 2.5rem;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+.book-link a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e0d5c2; /* A slightly darker sepia for contrast */
+    transition: background-color 0.3s;
+}
+
+.book-link a:hover {
+    background-color: #d0c5b2;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 2.5rem;
+    right: 2.5rem;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Hide the page indicator since it's not a multi-page document */
+.page-indicator, .page-count {
+    display: none;
+}
+
+.page-number {
+    flex-grow: 1;
+    text-align: center;
+}
